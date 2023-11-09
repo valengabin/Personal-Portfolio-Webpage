@@ -156,22 +156,30 @@
     max-width: 1280px;
     margin: 0 auto;
     margin-bottom: 6rem;
-    align-items: end;
+    align-items: center;
 }
 
 .project-item {
-  width: 100%;
-   
+  width: 30rem; /* Ancho deseado para el contenedor */
+  overflow: hidden; /* Oculta cualquier desbordamiento de la imagen al aplicar zoom */
+  transition: transform 0.3s ease; /* Agrega una transición suave con efecto ease */
+  transform-origin: center center; /* Centra el punto de transformación */
 }
 
 .project-item img {
-  width: 100%;
-  height: auto;
+  width: 30rem;
+  height: 20rem;
+  object-fit: cover;
 }
 
 .project-item a {
   text-decoration: none;
   font-size: 1.2rem;
+  
+}
+
+.project-item a img:hover {
+  transform: scale(1.1);
 }
 
 .project-item p {
@@ -185,10 +193,6 @@
   color: var(--color4);
 }
 
-img {
-  display: block;
-
-}
 
 /* CONTACT SECTION */
 
